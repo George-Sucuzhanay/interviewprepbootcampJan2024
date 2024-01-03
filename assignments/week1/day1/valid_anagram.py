@@ -35,3 +35,5 @@ s = "anagram"
 t = "nagaram"
 
 print(isAnagram(s,t));
+
+# leetcode 242

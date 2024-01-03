@@ -1,0 +1,116 @@
+Big O Notation
+
+1- Big O is a notation used to represent worst case behavior
+for time and space complexity for an algorithm
+
+2- given the input size n, how many steps (cpu instructions) or 
+how much space (memory) will it take for the algorithm to halt its
+execution
+
+Big O uses function to represent algorithm complexities
+
+c (constant line)
+constant number of steps don't not matter the size of the input
+
+logn:
+sort of divide the array into two sections consecutively until it finds the correct solution
+
+nlogn:
+mostly from sorting algorithms
+
+c < logn < n < nlogn < n^2 < n^3 < 2^n < 3^n < n!
+
+polynomial vs expotential algorithms
+
+polynomial: c < logn < n < nlogn < n^2 < n^3
+expotential: 2^n < 3^n < n!
+
+
+
+running time calculation:
+set of heuristics that we use for whenever we see some code
+code => O(...)
+
+1- consecutive statements:
+def fcn(n):
+    S1;
+    S2;
+    S3;
+
+r tells us how long statements take to execute
+=> O(r(S1) + r(S2) + r(S3))
+
+def fcn(arr):
+    print("hi")   => constant time
+    arr.sort()    => nlogn
+    x = 7 + 5     => constant time
+=> O(1+ nlogn + 1) => O(nlogn)
+
+
+Nested for loops:
+
+for i = 1 to n:    (n)
+    for j = 1 to n:  (x n)
+        for h = 1 to m: ( x m)
+            S1;          ( x r(S1))
+
+=> O(n^2 m r(S1))
+
+
+While loops
+i = 0     i = 7:
+while condition:
+{
+    csde
+    ...
+    ...
+    ...
+    i += 1
+}
+use stack and a recursive func on that counts steps
+
+
+recursive function: (similar to while loops)
+they are abistuous and will have to use a stack
+
+find the # of steps it takes to reach the base case
+
+i.e. linkedlist
+=> [ ] => [ ] => [ ] => [ ] => [ ] => ... => [ ] => null
+print all the elements of the linked list
+
+ListNode:
+    val = some ints;
+    next = ListNode;
+
+def PrintLL(root):
+    if not root:   (means if root is null)
+        return
+
+    print(root.val)
+    printLL(root.next)
+
+=> O(# of nodes in LL)
+
+
+let f be any function
+a is an element in R (set of all real numbers)
+O(af) = O(f)  this is the complexities of an algorithm
+
+
+
+O(f1 + f2 + ... + fm ) = O(max(f1,f2,...,fm))
+
+
+def func 2(arr1, arr2):
+    arr1.sort()
+    arr2.sort()
+
+when the time complexity is ambigous as above we keep the additionn sign
+    O(nlogn + mlogm)
+
+
+
+
+
+
