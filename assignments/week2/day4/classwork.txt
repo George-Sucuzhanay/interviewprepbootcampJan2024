@@ -1,0 +1,69 @@
+Binary trees vs binary search trees
+
+BT vs BST
+
+
+leetcode 104 max depth of binary trees
+2 ways to solve: 
+
+def maxDepth(self,root):
+    # recursive
+    # base classmate
+    if not root:
+        return 0
+    
+    return max(self.maxDepth(root.left), self.maxDepth(root.right) + 1
+
+    # remember in order to call maxDepth inside of the maxDepth func you must use the keyword self. 
+
+    # time complexity: O(n), where n is num of nodes in the tree
+    # space complexity: O(n), b/c function calls are stored in our stack
+
+    # in recursion events are in function calls
+
+# more efficient max depth reducing overhead
+
+def maxDepth(self,root):
+    # optimized solution
+    # simulate recursion in our code
+
+    max_depth = 0
+    stack = [ ]
+    if root:
+        stack.append = [[root, 1]]
+
+    while stack:
+        node, depth = stack.pop()   # node = [3],  depth = 1   from thr root at first
+        if node:
+            if node.left:
+                stack.append([node.left, depth + 1])
+            if node.right:
+                stack.appned([node.right, depth + 1])
+            max_depth = max(depth, max_depth)
+
+    return max_depth
+
+    # time: O(n), where n is the num of nodes
+    # space: O(1)
+    # this is depth first search, when we use a stack to go thr our tree(graph)
+    # we inherently traverse our tree in DFS (down leftmost traversal)
+
+    # DFS is associated with stacks LIFO
+    # BFS is associated with queues FIFO
+
+
+
+
+Binary Tree: (unordered)
+- every node has at most 2 children
+- its a tree b/c no cycles exist (graph w/o cycles)
+
+Binary Search Tree (ordered)
+- binary search logn algo + using it in trees
+- every node has at most 2 children
+- and left child MUST be < parent and right > parent
+
+
+
+
+

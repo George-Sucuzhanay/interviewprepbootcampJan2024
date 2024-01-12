@@ -1,0 +1,34 @@
+Trie:
+k-ary tree used for storing prefixes
+
+Binary Tree (2-ary) is a type of k-ary tree
+where every node has at most 2 children
+
+K-ary:
+every node has at most k-children
+
+trie store string words
+
+               O
+    a          b            c
+
+l     p        a   e        a
+
+l     e        d            t
+
+all nodes in a hold words that start with a 
+same with all the other nodes
+
+less time consuming that searching iteratively thru an array
+compared to a k-arry tree
+
+k-ary tree = prefix tree
+
+
+we must store where the words ends
+our nodes have a end_word variable telling us where the word
+finished
+
+
+
+
