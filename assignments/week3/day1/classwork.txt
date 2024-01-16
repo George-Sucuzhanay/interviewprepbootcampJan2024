@@ -1,1 +1,58 @@
-Heaps
+Heaps (same as priority queues)
+
+Heaps are a type of binary tree
+- where every node has at most 2 children
+- there exist a min heap property
+    every node children has greater values than the node itself
+- complete tree property:
+    perfectly filled tree before the very last level (full binary tree excluding the last level)
+    new nodes that will be insert need to be inserted from left to right starting from the last level in the treex
+-  the root is the smallest element of the whole tree
+
+you could traverse through a binary tree or through an array
+
+array:
+[       3      6      2       4      4      3]
+  0     1      2      3       4      5
+       ROOT
+
+let k be any node, let n be the number of nodes:
+    leftchild(k) = 2k  if k <= n/2
+    k is the current index
+
+    rightchild(k): 2k + 1   if k <= n/2
+
+    parent([k/2]) if k > 1:
+
+remember the array always begins in 1
+
+the nodes where k >= n/2 + 1 will all be leaf nodes w/o children
+
+
+Maxheap:
+- maxheap the ordering is the opposite from a minheap
+- where every node k its children are greater than k
+- the root is the largest element in the whole tree
+
+
+
+in both heaps we have the following functions:
+
+1- Push( adding elements to heap) O(log n)
+2- Pop ( delete the root element) O(log n)
+3- heapify ( convert any array inot a heap) O(n)
+
+
+to insert we will at most make log n percolatations
+
+
+
+heap is used to find largest or 
+k- largest element in array
+
+import heapq  (from Python)
+
+
+k closest or k largest is a hint we need to use a heap
+
+
