@@ -1,0 +1,99 @@
+leetcode remove the nth node from the end of the linked list
+l and r pointers for iterating through linked list
+
+the distance btw l and r will always = to n
+while loop
+
+whilr r:
+    l += 1
+    r += 1
+
+# when r reaches the end of the list 
+l becomes the node we want to delete
+
+we then create a dummy node
+l points to our dummy node and r points to 2
+
+distance become length l to n + 1 due to our dummy node keeping in mind we want to access the node prior to the one we need to delete to have its pointer point to the toDeleteNode.next
+
+
+
+
+binary search
+
+find the target valve inside an array
+
+1- iterate through the entire array O(n)
+
+2- binary search O(logn) - means how many times can I divide an array by 2
+
+check middle value in arr
+then check in the first half of arr then the second half of arr
+
+if its sorted then you'll know initally after checking mid valve if target value is higher or lower and follow through
+
+
+
+inveresTree
+
+starting from root
+    check root.left
+
+    check root.left
+    
+    switch:  
+   
+
+
+    2 ways:
+    changes the values themsevles
+    or 
+    change left and right pointers of root 
+
+
+
+    # classmate example
+
+    def inverttree(self,root):
+        self.helper(root)
+        return root
+
+    def helper(self, root):
+        if not root:
+            return
+        self.helper(root.right)
+        self.helper(root.left)
+        root.left, root.right = root.right, root.left
+
+
+
+
+
+    # my classwork exmaple not working
+    def invertTree(self,root):
+        if !root.left & !root.right:
+            return
+        else:
+            tmp = root.left
+            root.left = root.right
+            root.right = tmpt
+            invertTree(root.left)
+            invertTree(root.right)
+    return root
+
+
+    # teacher example
+ # self is a reference to itself b/c its using a class
+    def invertTree(self,root):
+        if not root:
+            return
+        self.helper(root.right)
+        self.helper(root.left)
+                root.left, root.right = root.right, root.left
+
+    return root
+
+
+
+
+

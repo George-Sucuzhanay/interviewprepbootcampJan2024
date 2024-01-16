@@ -1,5 +1,5 @@
 
-def isAnagram( s: str, t: str) -> bool:
+def isAnagram( s, t):
     # 1) create s hashmap
     # 2) for every element in s create a key-value pair
     # 3) traverse s' hashmap ensuring that a element in t exisit

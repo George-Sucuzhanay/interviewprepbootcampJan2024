@@ -1,0 +1,26 @@
+1/8/2024
+
+Two Pointers Problems (set of algorithms):
+    - sliding window
+    - fast/slow pointer
+
+always have a left and right pointer indicies (not c++ pointers)
+
+while l < r:
+
+will halt when l and r meet at the same index
+
+
+
+while r < n:   (sliding window) where n is the input size
+similar to for r in range(n):
+
+[ _    _     _   _    _     _     _ ]
+l1 .....
+dynamic size
+move r until some condition is invalid
+then we move l until condition is valid again
+
+static sized windows
+sliding window of size 2 means the length btw my left and right poitner is always 2
+
